@@ -1,0 +1,74 @@
+apply plugin: 'com.android.library'
+
+def app = rootProject.ext.app
+def common = rootProject.ext.common
+android {
+
+    compileSdkVersion app.compileSdkVersion
+
+    defaultConfig {
+        minSdkVersion app.minSdkVersion
+        targetSdkVersion app.targetSdkVersion
+        versionCode app.versionCode
+        versionName app.versionName
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    //单元测试
+    api common.junit
+    androidTestImplementation common.test_runner
+    androidTestImplementation common.test_espresso
+
+    //support
+    api common.multidex
+    api common.design
+    api common.cardview
+    api common.appcompat
+    api common.support_v4
+    api common.palette
+    api common.recyclerview
+    api common.constraint_Layout
+    api common.support_annotations
+
+    //rxjava
+    api common.rxjava
+    api common.rxandroid
+    //retrofit
+    api common.retrofit
+    api common.converter_gson
+    api common.adapter_rxjava
+    api common.logging_interceptor
+    //okhttp
+    api common.okhttp
+    api common.httpcore
+    api common.okhttp_urlconnection
+
+    //图片加载
+    api common.glide
+    annotationProcessor common.glide_compiler
+
+    //推送
+//    api common.getui
+
+    // Crash 监控、崩溃分析
+    api common.bugly_sdk
+    api common.bugly_ndk
+
+    //埋点统计
+    api common.growingio
+
+    //others 工具
+
+
+}

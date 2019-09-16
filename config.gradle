@@ -58,6 +58,9 @@ ext {
             "glide"                 : "com.github.bumptech.glide:glide:4.7.1",
             "glide_compiler"        : "com.github.bumptech.glide:compiler:4.7.1",
 
+            //支付：wx alipay 银联。。。
+            "wx_sdk"                : "com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+",
+
             //推送
             "getui"                 : "com.getui:sdk:2.13.0.0", //"com.getui:sdk:2.13.2.0付费版"
 
@@ -74,6 +77,6 @@ ext {
      * 某个module中单独使用的库 和 配置
      */
     moudle_one = [
-            "nineoldandroids"    : 'com.nineoldandroids:library:2.4.0'
+            "第三方xxx"    : "仓库地址xxx"
     ]
 }

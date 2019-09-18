@@ -1,7 +1,5 @@
 package com.czk.mytemplate;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 
 import com.alibaba.android.arouter.facade.annotation.Route;
@@ -9,7 +7,6 @@ import com.czk.common.BaseActivity;
 import com.czk.common.utils.arouter.ARouterConfig;
 import com.czk.common.utils.arouter.ARouterUtils;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -21,10 +18,8 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        ButterKnife.bind(this);
+    protected int getLayoutId() {
+        return R.layout.activity_main;
     }
 
     @OnClick({R.id.tv_turn_to,R.id.tv_turn_to2})

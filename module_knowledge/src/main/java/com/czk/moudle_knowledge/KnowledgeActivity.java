@@ -1,7 +1,5 @@
 package com.czk.moudle_knowledge;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.view.View;
 import android.widget.Toast;
 
@@ -10,7 +8,6 @@ import com.czk.common.BaseActivity;
 import com.czk.common.utils.arouter.ARouterConfig;
 import com.czk.common.utils.arouter.ARouterUtils;
 
-import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 /**
@@ -21,11 +18,8 @@ import butterknife.OnClick;
 public class KnowledgeActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.kn_activity_knowledge);
-        ButterKnife.bind(this);
-
+    protected int getLayoutId() {
+        return R.layout.kn_activity_knowledge;
     }
 
     @OnClick({R2.id.kn_tv_bakc})

@@ -1,0 +1,16 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.czk.module_user" >
+
+    <application >
+
+        <!--Activity-->
+        <activity
+            android:name=".UserActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:screenOrientation="portrait"
+            />
+
+    </application>
+
+</manifest>
+

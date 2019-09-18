@@ -1,4 +1,6 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.alibaba.arouter'
+apply plugin: 'com.jakewharton.butterknife'
 
 def app = rootProject.ext.app
 def common = rootProject.ext.common
@@ -11,13 +13,18 @@ android {
         targetSdkVersion app.targetSdkVersion
         versionCode app.versionCode
         versionName app.versionName
-    }
 
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-    }
+        //MultiDex分包方法
+        multiDexEnabled true
 
+        //Arouter路由配置
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+                includeCompileClasspath = true
+            }
+        }
+    }
 
     buildTypes {
         release {
@@ -70,6 +77,14 @@ dependencies {
 
     //推送
 //    api common.getui
+
+    //路由
+    api common.arouter_api
+//    annotationProcessor common.arouter_compiler
+
+    //黄油刀
+    api common.butterknife
+//    annotationProcessor common.butterknife_compiler
 
     // Crash 监控、崩溃分析
     api common.bugly_sdk

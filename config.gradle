@@ -64,6 +64,14 @@ ext {
             //推送
             "getui"                 : "com.getui:sdk:2.13.0.0", //"com.getui:sdk:2.13.2.0付费版"
 
+            //路由
+            "arouter_api"         : "com.alibaba:arouter-api:1.5.0",
+            "arouter_compiler"    : "com.alibaba:arouter-compiler:1.2.2",
+
+            //黄油刀
+            "butterknife"         : "com.jakewharton:butterknife:8.8.1",
+            "butterknife_compiler": "com.jakewharton:butterknife-compiler:8.8.1",
+
             // Crash 监控、崩溃分析
             "bugly_sdk"                 : "com.tencent.bugly:crashreport:latest.release",
             "bugly_ndk"                 : "com.tencent.bugly:nativecrashreport:latest.release",

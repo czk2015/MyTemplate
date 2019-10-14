@@ -2,7 +2,7 @@ package com.czk.common.utils.arouter;
 
 import com.alibaba.android.arouter.launcher.ARouter;
 import com.czk.common.BaseActivity;
-import com.czk.common.BaseFragment;
+import com.czk.common.base.BaseFragment;
 
 /**
  * 路由工具类

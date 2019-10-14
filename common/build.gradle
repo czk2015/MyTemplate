@@ -87,8 +87,8 @@ dependencies {
 //    annotationProcessor common.butterknife_compiler
 
     // Crash 监控、崩溃分析
-    api common.bugly_sdk
-    api common.bugly_ndk
+//    api common.bugly_sdk
+//    api common.bugly_ndk
 
     //埋点统计
 //    api common.growingio

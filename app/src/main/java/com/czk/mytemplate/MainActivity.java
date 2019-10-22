@@ -18,19 +18,19 @@ import butterknife.OnClick;
 public class MainActivity extends BaseActivity {
 
     @Override
-    protected int getLayoutId() {
+    protected int setContentView() {
         return R.layout.activity_main;
     }
 
-    @OnClick({R.id.tv_turn_to,R.id.tv_turn_to2})
+    @OnClick({R.id.tv_turn_to,R.id.tv_turn_to_constraint})
     public void ViewClick(View v) {
         switch (v.getId()) {
             case R.id.tv_turn_to:
                 ARouterUtils.intentTo(ARouterConfig.USER_MAIN_ACTIVITY);
                 finish();
                 break;
-            case R.id.tv_turn_to2:
-                ARouterUtils.intentTo(ARouterConfig.KN_MAIN_ACTIVITY);
+            case R.id.tv_turn_to_constraint:
+                ARouterUtils.intentTo(ARouterConfig.USER_TEST_CONSTRAINT_ACTIVITY);
                 finish();
                 break;
             default:

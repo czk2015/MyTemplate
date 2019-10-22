@@ -30,5 +30,13 @@ public interface ARouterConfig {
     String USER_MAIN_ACTIVITY = "/user/UserActivity";
 
 
+    /*---------------------------- 用来测试的一下页面----------------------*/
+    /**
+     * 练习constraintlayout布局
+     */
+    String USER_TEST_CONSTRAINT_ACTIVITY = "/user/TestConstriantLayoutActivity";
+
+
+
 }
 

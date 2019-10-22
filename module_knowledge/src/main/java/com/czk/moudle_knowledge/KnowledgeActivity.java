@@ -18,7 +18,7 @@ import butterknife.OnClick;
 public class KnowledgeActivity extends BaseActivity {
 
     @Override
-    protected int getLayoutId() {
+    protected int setContentView() {
         return R.layout.kn_activity_knowledge;
     }
 

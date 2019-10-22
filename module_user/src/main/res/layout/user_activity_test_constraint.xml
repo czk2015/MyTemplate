@@ -1,0 +1,140 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--参考资料-->
+        <!--https://www.jianshu.com/p/17ec9bd6ca8a-->
+
+        <!--常用的相对位置-->
+        <!--
+        layout_constraintLeft_toLeftOf
+        layout_constraintLeft_toRightOf
+        layout_constraintRight_toLeftOf
+        layout_constraintRight_toRightOf
+        layout_constraintTop_toTopOf
+        layout_constraintTop_toBottomOf
+        layout_constraintBottom_toTopOf
+        layout_constraintBottom_toBottomOf
+        layout_constraintBaseline_toBaselineOf   //基准线对齐
+        layout_constraintStart_toEndOf
+        layout_constraintStart_toStartOf
+        layout_constraintEnd_toStartOf
+        layout_constraintEnd_toEndOf
+        -->
+
+        <!--角度定位-->
+        <!--
+        app:layout_constraintCircle="@+id/TextView1"(相对的控件)
+        app:layout_constraintCircleAngle="120"（角度）
+        app:layout_constraintCircleRadius="150dp"（距离）
+        -->
+
+
+        <!--水平垂直偏移属性，类似权重-->
+        <!--
+        layout_constraintHorizontal_bias 水平偏移
+        layout_constraintVertical_bias 垂直偏移
+        -->
+
+        <!--设置view的宽高比例-->
+        <!--
+         宽高比
+         当宽或高至少有一个尺寸被设置为0dp时，
+         可以通过属性layout_constraintDimensionRatio设置宽高比，
+         -->
+
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:title="约束布局"
+            app:titleTextColor="@android:color/white" />
+
+
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="奚梦瑶维密秀摔倒道歉"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="#fd7400"
+            app:layout_constraintLeft_toLeftOf="@id/text_title"
+            app:layout_constraintTop_toBottomOf="@+id/text_title" />
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:text="11月20日晚，一众国内外维密天使闪亮登场。但在表演环节中，奚梦瑶不慎出现意外跌倒在台上，意外发生后，奚梦瑶立刻整理了一下头发和身上的装饰，站起身来继续走T台，并且露出专业和自信的笑容，全场观众也为她拍手鼓励。"
+            app:layout_constraintLeft_toRightOf="@+id/image"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/image" />
+
+        <TextView
+            android:id="@+id/text_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="时间：2小时前"
+            app:layout_constraintLeft_toLeftOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+        <!--
+        宽高比
+        当宽或高至少有一个尺寸被设置为0dp时，
+        可以通过属性layout_constraintDimensionRatio设置宽高比，
+        -->
+        <ImageView
+            android:id="@+id/image2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:scaleType="fitXY"
+            android:src="#fd7400"
+            app:layout_constraintDimensionRatio="1:3"
+            app:layout_constraintLeft_toLeftOf="@id/image"
+            app:layout_constraintRight_toRightOf="@+id/image"
+            app:layout_constraintTop_toBottomOf="@id/image" />
+
+
+        <TextView
+            android:id="@+id/text_time2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="800dp"
+            android:text="时间：2小时前"
+            app:layout_constraintLeft_toLeftOf="@id/image"
+            app:layout_constraintTop_toBottomOf="@+id/image" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</android.support.v4.widget.NestedScrollView>
+
+
+

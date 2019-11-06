@@ -39,8 +39,8 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation project(':module_user')
-    implementation project(':module_knowledge')
+    implementation project(':module_demo')
+    implementation project(':module_one')
     implementation project(':common')
     //黄油刀
     annotationProcessor common.butterknife_compiler

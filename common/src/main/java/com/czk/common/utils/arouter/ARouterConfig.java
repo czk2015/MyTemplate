@@ -12,17 +12,15 @@ public interface ARouterConfig {
 
     String APP_MAIN_ACTIVITY = "/app/MainActivity";
 
-    /*------------------------资讯----------------------------*/
 
-    /*------------------------电商----------------------------*/
+    /*------------------------moudle one----------------------------*/
     /**
      *  电商首页
      */
     String KN_MAIN_ACTIVITY = "/kn/KnowledgeActivity";
 
-    /*------------------------创投----------------------------*/
 
-    /*------------------------用户中心----------------------------*/
+    /*------------------------moudle demo----------------------------*/
 
     /**
      * 用户模块
@@ -35,6 +33,11 @@ public interface ARouterConfig {
      * 练习constraintlayout布局
      */
     String USER_TEST_CONSTRAINT_ACTIVITY = "/user/TestConstriantLayoutActivity";
+
+    /**
+     * 练习Aidl的使用
+     */
+    String Demo_TEST_CONSTRAINT_ACTIVITY = "/user/TestAidlActivity";
 
 
 

@@ -19,7 +19,7 @@ import butterknife.OnClick;
 public class UserActivity extends BaseActivity {
 
     @Override
-    protected int setContentView() {
+    public int setContentView() {
         return R.layout.user_activity_mian;
     }
 

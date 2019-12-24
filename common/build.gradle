@@ -32,6 +32,11 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
     buildTypes {
         release {
             minifyEnabled false
@@ -49,7 +54,7 @@ dependencies {
     androidTestImplementation common.test_runner
     androidTestImplementation common.test_espresso
 
-    //support
+    //androidx
     api common.multidex
     api common.design
     api common.cardview
@@ -78,7 +83,7 @@ dependencies {
     annotationProcessor common.glide_compiler
 
     //支付
-//    api common.wx_sdk
+    api common.wx_sdk
     api (name: 'alipaySdk-15.6.5-20190718211159-noUtdid', ext: 'aar')
 
     //推送
@@ -102,7 +107,7 @@ dependencies {
     //others 工具
 
     //注解使用、javaopet自动代码生成、java反射练习使用
-    implementation project(path: ':moudle_annotation')
-    implementation project(path: ':module_annotation_compiler')
+    api project(path: ':moudle_annotation')
+    api project(path: ':module_annotation_compiler')
 
 }

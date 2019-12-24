@@ -9,7 +9,7 @@ android {
         versionCode app.versionCode
         versionName app.versionName
         applicationId "com.czk.mytemplate"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         //MultiDex分包方法
         multiDexEnabled true
@@ -23,6 +23,10 @@ android {
         }
     }
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 
     buildTypes {
         release {

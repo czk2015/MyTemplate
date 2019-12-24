@@ -1,1 +1,1 @@
-include ':app', ':common', ':module_one', ':module_demo'
+include ':app', ':common', ':module_one', ':module_demo', ':module_annotation_compiler', ':moudle_annotation'

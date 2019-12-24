@@ -21,6 +21,10 @@ allprojects {
     repositories {
         google()
         jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
         //引入aar文件的时候,如果是module中引入那么指定一下libs的全路径
         flatDir {
             dirs 'libs', '../common/libs'

@@ -78,7 +78,7 @@ dependencies {
     annotationProcessor common.glide_compiler
 
     //支付
-    api common.wx_sdk
+//    api common.wx_sdk
     api (name: 'alipaySdk-15.6.5-20190718211159-noUtdid', ext: 'aar')
 
     //推送
@@ -96,10 +96,13 @@ dependencies {
 //    api common.bugly_sdk
 //    api common.bugly_ndk
 
-    //埋点统计
+    //统计
 //    api common.growingio
 
     //others 工具
 
+    //注解使用、javaopet自动代码生成、java反射练习使用
+    implementation project(path: ':moudle_annotation')
+    implementation project(path: ':module_annotation_compiler')
 
 }

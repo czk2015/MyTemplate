@@ -7,7 +7,9 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:paddingBottom="1000dp"
+        >
 
         <!--参考资料-->
         <!--https://www.jianshu.com/p/17ec9bd6ca8a-->
@@ -121,15 +123,66 @@
             app:layout_constraintRight_toRightOf="@+id/image"
             app:layout_constraintTop_toBottomOf="@id/image" />
 
+        <!-- 设置相对屏幕的宽高
+            layout_constraintWidth_percent
+            layout_constraintHeight_percent
+          -->
+        <ImageView
+            android:id="@+id/image3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:src="#fd7400"
+            app:layout_constraintWidth_percent="0.5"
+            app:layout_constraintHeight_percent="0.2"
+            android:layout_marginTop="20dp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image2"
+            />
 
-        <TextView
-            android:id="@+id/text_time2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="800dp"
-            android:text="时间：2小时前"
-            app:layout_constraintLeft_toLeftOf="@id/image"
-            app:layout_constraintTop_toBottomOf="@+id/image" />
+        <!--  权重
+         layout_constraintHorizontal_weight
+         layout_constraintVertical_weight
+         -->
+
+        <ImageView
+            android:id="@+id/image4"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:src="#fd7a03"
+            app:layout_constraintHorizontal_weight="2"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/image5"
+            app:layout_constraintTop_toBottomOf="@id/image3"
+            />
+
+        <ImageView
+            android:id="@+id/image5"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:src="#4d7400"
+            app:layout_constraintHorizontal_weight="1"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/image4"
+            app:layout_constraintRight_toLeftOf="@+id/image6"
+            app:layout_constraintTop_toBottomOf="@id/image3"
+            />
+
+        <ImageView
+            android:id="@+id/image6"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:src="#e1f100"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintWidth_percent="0.1"
+            app:layout_constraintDimensionRatio="1:1"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toRightOf="@+id/image5"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/image3"
+            />
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
